@@ -1,0 +1,5 @@
+data/zandbox
+data/fix_csv.py
+*.gdoc
+*.gsheet
+fix_*.py
