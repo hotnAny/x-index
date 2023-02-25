@@ -177,6 +177,19 @@ if __name__ == "__main__":
 
     # print(results)
 
+    def optimize_fig(fig, move_legend=True):
+        fig.update_layout(yaxis=dict(range=[0, 1]))
+        fig.update_layout(legend_title=None)
+        fig.update_layout(legend_font_size=24)
+        if move_legend:
+            fig.update_layout(legend=dict(x=0.975, y=0.05, xanchor='right', yanchor='bottom'))
+        fig.update_xaxes(tickfont_size=24)
+        fig.update_yaxes(tickfont_size=24)
+        fig.update_xaxes(title_font_size=24)
+        fig.update_yaxes(title_font_size=24)
+        fig.update_xaxes(dtick=1)
+        fig.update_yaxes(dtick=0.1)
+
     # --------------------------------------------------------------------------------
     # 
     # plot measurement 1: x-index of each HCI venue over the years
@@ -203,10 +216,13 @@ if __name__ == "__main__":
 
                 d[venue][dyear] = results[venue_year]['x-index']
         d['year'] = years
-
+        
         df = pd.DataFrame(data=d)
-        fig = px.line(df, x='year', y=venues, title="X-index")
-        fig.update_layout(yaxis=dict(range=[0, 1]))
+        fig = px.line(df, x='year', y=venues)
+        optimize_fig(fig)
+        fig.update_xaxes(title_text="Published Year")
+        fig.update_yaxes(title_text="X-index")
+        
         if DEBUG:
             fig.show()
         pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig1.png'), width=WIDTH_FIG, height=HEIGHT_FIG)
@@ -220,7 +236,7 @@ if __name__ == "__main__":
         years = []
         venues = []
         start_year = 2010
-        num_years = 11 - FIRST_N
+        num_years = 13 - FIRST_N
         for dyear in range(0, num_years):
             year = start_year + dyear
             years.append(year)
@@ -238,8 +254,10 @@ if __name__ == "__main__":
         d['year'] = years
 
         df = pd.DataFrame(data=d)
-        fig = px.line(df, x='year', y=venues, title="X-index in the first " + str(FIRST_N) + " years after each conference" )
-        fig.update_layout(yaxis=dict(range=[0, 1]))
+        fig = px.line(df, x='year', y=venues) #, title="X-index in the first " + str(FIRST_N) + " years after each conference" )
+        optimize_fig(fig)
+        fig.update_xaxes(title_text="Published Year")
+        fig.update_yaxes(title_text="X-index")
         if DEBUG:
             fig.show()
         pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig2.png'), width=WIDTH_FIG, height=HEIGHT_FIG)
@@ -280,8 +298,11 @@ if __name__ == "__main__":
                         d[venue_year][dyear] = results[venue_year]['x-index-distr-by-year'][str(cite_year)]
 
             df = pd.DataFrame(data=d)
-            fig = px.line(df, x='year', y=venue_years, title=venue + " X-index by year")
-            fig.update_layout(yaxis=dict(range=[0, 1]))
+            fig = px.line(df, x='year', y=venue_years) #, title=venue + " X-index by year")
+            optimize_fig(fig, False)
+            fig.update_xaxes(title_text="Citation Year")
+            fig.update_yaxes(title_text="X-index")
+            
             if DEBUG:
                 fig.show()
             pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig3_' + venue.upper() + '.png'), width=WIDTH_FIG, height=HEIGHT_FIG)
@@ -360,8 +381,11 @@ if __name__ == "__main__":
                 d1[venue][dyear] /= (d1[venue][dyear] + d2[venue][dyear])
 
         df = pd.DataFrame(data=d1)
-        fig = px.line(df, x='year', y=venues, title="Each year's X-index only based on HCI papers published in the previous " + str(FIRST_N) + " years")
-        fig.update_layout(yaxis=dict(range=[0, 1]))
+        fig = px.line(df, x='year', y=venues) #, title="Each year's X-index only based on HCI papers published in the previous " + str(FIRST_N) + " years")
+        optimize_fig(fig)
+        fig.update_xaxes(title_text="Citation Year")
+        fig.update_yaxes(title_text="X-index")
+        
         if DEBUG:
             fig.show()
         pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig4.png'), width=WIDTH_FIG, height=HEIGHT_FIG)

@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: ref_main.bib
+Warning--I didn't find a database entry for "bush1945we"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 5 entries,
+            5981 wiz_defined-function locations,
+            1498 strings with 18520 characters,
+and the built_in function-call counts, 3749 in all, are:
+= -- 425
+> -- 85
+< -- 0
++ -- 22
+- -- 35
+* -- 197
+:= -- 409
+add.period$ -- 30
+call.type$ -- 5
+change.case$ -- 25
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 351
+empty$ -- 251
+format.name$ -- 35
+if$ -- 802
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 90
+num.names$ -- 35
+pop$ -- 101
+preamble$ -- 1
+purify$ -- 65
+quote$ -- 0
+skip$ -- 146
+stack$ -- 0
+substring$ -- 277
+swap$ -- 20
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 150
+warning$ -- 0
+while$ -- 35
+width$ -- 0
+write$ -- 144
+(There was 1 warning)
