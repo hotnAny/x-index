@@ -1,4 +1,29 @@
-\section{Discussion}
+\section{Discussions}
 
-alternative interpretation
-- maybe hci becomes more interdisciplinary
+\subsection{Limitations of the Analyses}
+
+First, \xin intends to indicate how much non-HCI papers cite HCI papers, yet our classification of non-HCI papers is based on a list of core HCI venues. Thus some non-HCI citations might have come from HCI venues not included in our list. A common example of this issue is various HCI workshops over the years.
+As a consequence, the resultant \xin in our analyses is actually inflated---the real numbers should be lower after removing the `noisy' HCI venues from the currently-considered non-HCI citations.
+
+Second, as mentioned earlier, we rely on Lens.org API \cite{TheLensF23:online} that does not seem to retrieve all citations. 
+We do not believe such a limitation invalidates our analyses unless this API acts biasedly, \ie intentionally misses either HCI or non-HCI citations.
+Future work can union multiple tools and sources (\eg Google Scholar, Semantic Scholar, and Microsoft Academic) to approximate a full coverage of citations.
+
+Third, \xin is just a number and it would be great to perform more detailed analyses, such as breaking down the citation sources of CHI.
+Future work can employ a more intelligent method than our simple keyword-matching approach to dissect the disciplinarity of citation sources (\eg $X\%$ HCI, $Y\%$ Computer Vision, and $Z\%$ Psychology).
+
+\subsection{Interpreting the Results}
+
+Does our \xin analyses mean that HCI has a decreasing impact across the disciplinary boundary?
+It seems so; at least we can say that relatively fewer and fewer papers outside of the core HCI venues are citing HCI papers.
+
+One counter-argument against the above could be that HCI venues themselves might have become more and more interdisciplinary. 
+Thus citations coming from within these HCI venues can also indicate impact across what used to be the disciplinary boundary.
+
+It is also possible that the number of HCI venues is growing much faster that of non-HCI venues.
+In that case, even if more and more non-HCI venues are citing HCI papers, \xin will still decrease because the denominator is increasing faster than the nominator.
+
+It will be interesting for future work to analyze \xin of other research fields. 
+For example, according to Google Scholar, as of March 2023, CVPR has the highest h-index amongst all ``Engineering \& Computer Science'' publications---Should we expect CVPR to have a high \xin?
+
+Finally, regardless of how we should interpret these analyses, as a field, HCI should develop more awareness of its impact beyond HCI (\eg a recent analysis by Cao \etal on industrial impact \cite{cao_breaking_2023}), rather than remaining complacent with validating each other's work internally via having more and more HCI papers cite other HCI papers.

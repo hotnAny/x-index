@@ -236,7 +236,8 @@ if __name__ == "__main__":
         years = []
         venues = []
         start_year = 2010
-        num_years = 13 - FIRST_N
+        latest_year = 2023
+        num_years = 11 
         for dyear in range(0, num_years):
             year = start_year + dyear
             years.append(year)
@@ -250,9 +251,10 @@ if __name__ == "__main__":
                 if venue not in d:
                     d[venue] = [float('NaN')] * num_years
                 
-                d[venue][dyear] = results[venue_year]['x-index-firstn']
-        d['year'] = years
+                if year < latest_year - FIRST_N:
+                    d[venue][dyear] = results[venue_year]['x-index-firstn']
 
+        d['year'] = years
         df = pd.DataFrame(data=d)
         fig = px.line(df, x='year', y=venues) #, title="X-index in the first " + str(FIRST_N) + " years after each conference" )
         optimize_fig(fig)

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.6.8)  24 FEB 2023 19:42
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2022.6.8)  4 MAR 2023 15:20
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/Users/hotnany/Library/CloudStorage/GoogleDrive-xac@g.ucla.edu/My Drive/Research/2023_X-index/write-up/main"
@@ -1415,7 +1415,12 @@ LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
 (Font)              scaled to size 9.0pt on input line 89.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
 (Font)              scaled to size 10.95pt on input line 89.
- (./00_abstract.tex)
+ (./00_abstract.tex
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `inconsolata' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 89.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/b/n' will be
@@ -1429,93 +1434,76 @@ Package microtype Info: Character `AE ' is missing
 (microtype)             in font `OT1/minlibertine/m/n/6.2'.
 (microtype)             Ignoring protrusion settings for this character.
  (./01_introduction.tex
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `inconsolata' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
 (Font)              scaled to size 9.0pt on input line 25.
 Package microtype Info: Character `AE ' is missing
 (microtype)             in font `OT1/minlibertine/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
+(Font)              scaled to size 7.3pt on input line 27.
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
+(Font)              scaled to size 5.5pt on input line 27.
 ) (./02_data.tex
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 7.3pt on input line 9.
-LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
-(Font)              scaled to size 5.5pt on input line 9.
-<figures/hci_venues.pdf, id=62, 361.35pt x 903.375pt>
+<figures/hci_venues.pdf, id=71, 361.35pt x 758.835pt>
 File: figures/hci_venues.pdf Graphic file (type pdf)
 <use figures/hci_venues.pdf>
-Package luatex.def Info: figures/hci_venues.pdf  used on input line 17.
-(luatex.def)             Requested size: 241.14749pt x 602.87341pt.
-
-
-LaTeX Warning: Float too large for page by 3.17345pt on input line 20.
-
+Package luatex.def Info: figures/hci_venues.pdf  used on input line 20.
+(luatex.def)             Requested size: 241.14749pt x 506.41368pt.
 ) (./03_analysis_findings.tex [1.1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 <figures/fig1.png, id=100, 1204.5pt x 677.53125pt>
 File: figures/fig1.png Graphic file (type png)
 <use figures/fig1.png>
-Package luatex.def Info: figures/fig1.png  used on input line 16.
+Package luatex.def Info: figures/fig1.png  used on input line 7.
 (luatex.def)             Requested size: 241.14749pt x 135.63824pt.
 
 
-Class acmart Warning: A possible image without description on input line 16.
+Class acmart Warning: A possible image without description on input line 7.
 
-<figures/fig2.png, id=102, 1204.5pt x 677.53125pt>
+<figures/fig2.png, id=101, 1204.5pt x 677.53125pt>
 File: figures/fig2.png Graphic file (type png)
 <use figures/fig2.png>
-Package luatex.def Info: figures/fig2.png  used on input line 26.
+Package luatex.def Info: figures/fig2.png  used on input line 9.
 (luatex.def)             Requested size: 241.14749pt x 135.63824pt.
 
-Class acmart Warning: A possible image without description on input line 26.
+Class acmart Warning: A possible image without description on input line 9.
 
-
-Underfull \vbox (badness 2644) has occurred while \output is active []
-
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 33.
-LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
- [2.2<./figures/hci_venues.pdf><./figures/fig1.png><./figures/fig2.png>]
-<figures/fig3_CHI.png, id=129, 1204.5pt x 677.53125pt>
+<figures/fig3_CHI.png, id=104, 1204.5pt x 677.53125pt>
 File: figures/fig3_CHI.png Graphic file (type png)
 <use figures/fig3_CHI.png>
-Package luatex.def Info: figures/fig3_CHI.png  used on input line 45.
+Package luatex.def Info: figures/fig3_CHI.png  used on input line 22.
 (luatex.def)             Requested size: 241.14749pt x 135.63824pt.
-<figures/fig3_UIST.png, id=130, 1204.5pt x 677.53125pt>
+<figures/fig3_UIST.png, id=105, 1204.5pt x 677.53125pt>
 File: figures/fig3_UIST.png Graphic file (type png)
 <use figures/fig3_UIST.png>
-Package luatex.def Info: figures/fig3_UIST.png  used on input line 46.
+Package luatex.def Info: figures/fig3_UIST.png  used on input line 23.
 (luatex.def)             Requested size: 241.14749pt x 135.63824pt.
-<figures/fig3_CSCW.png, id=131, 1204.5pt x 677.53125pt>
+<figures/fig3_CSCW.png, id=106, 1204.5pt x 677.53125pt>
 File: figures/fig3_CSCW.png Graphic file (type png)
 <use figures/fig3_CSCW.png>
-Package luatex.def Info: figures/fig3_CSCW.png  used on input line 47.
+Package luatex.def Info: figures/fig3_CSCW.png  used on input line 24.
 (luatex.def)             Requested size: 241.14749pt x 135.63824pt.
 
+Class acmart Warning: A possible image without description on input line 27.
 
-Class acmart Warning: A possible image without description on input line 50.
-
-<figures/fig4.png, id=133, 1204.5pt x 677.53125pt>
+LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 34.
+LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 34.
+[2.2<./figures/hci_venues.pdf><./figures/fig1.png><./figures/fig2.png>]
+<figures/fig4.png, id=131, 1204.5pt x 677.53125pt>
 File: figures/fig4.png Graphic file (type png)
 <use figures/fig4.png>
-Package luatex.def Info: figures/fig4.png  used on input line 62.
+Package luatex.def Info: figures/fig4.png  used on input line 55.
 (luatex.def)             Requested size: 241.14749pt x 135.63824pt.
 
-Class acmart Warning: A possible image without description on input line 62.
 
-) (./04_discussion.tex)
+Class acmart Warning: A possible image without description on input line 55.
 
-Package natbib Warning: Citation `bush1945we' on page 3 undefined on input line 100.
+) (./04_discussion.tex [3.3<./figures/fig3_CHI.png><./figures/fig3_UIST.png><./figures/fig3_CSCW.png><./figures/fig4.png>]) (./main.bbl) [4.4
 
-(./main.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-[3.3<./figures/fig3_CHI.png><./figures/fig3_UIST.png><./figures/fig3_CSCW.png><./figures/fig4.png>] (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+] (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
@@ -1525,23 +1513,23 @@ Class acmart Warning: Some images may lack descriptions.
 
 (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FA4D93B209B22D6F0C1F47DD0E3D4808;2538.
+(rerunfilecheck)             Checksum: A1ED784C0760DBCE6A70034EF14BBDEF;3182.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45023 strings out of 477785
- 244390,1373583 words of node,token memory allocated
- 762 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 9 glue, 4 kern, 1 penalty, 1 margin_kern, 5 glyph, 21 attribute, 67 glue_spec, 21 attribute_list, 4 write, 3 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 1:9,2:944,3:568,4:248,5:1448,6:147,7:19345,8:109,9:749,10:10,11:1177
- 64031 multiletter control sequences out of 65536+600000
- 214 fonts using 26870671 bytes
- 114i,11n,128p,1101b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/inconsolata/Inconsolatazi4-Bold.otf>{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/7t.enc}</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/inconsolata/Inconsolatazi4-Regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RI.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RB.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RB.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/MinLibReg.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on main.pdf (3 pages, 597118 bytes).
+ 45037 strings out of 477785
+ 244384,1373583 words of node,token memory allocated
+ 759 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 7 glue, 4 kern, 1 penalty, 1 margin_kern, 7 glyph, 19 attribute, 68 glue_spec, 19 attribute_list, 4 write, 3 pdf_action, 2 pdf_colorstack nodes
+   avail lists: 1:9,2:936,3:574,4:249,5:1494,6:137,7:19542,8:106,9:739,10:11,11:1197
+ 64042 multiletter control sequences out of 65536+600000
+ 215 fonts using 26921239 bytes
+ 114i,12n,128p,1101b,563s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/inconsolata/Inconsolatazi4-Bold.otf>{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/7t.enc}</usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RI.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/inconsolata/Inconsolatazi4-Regular.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RB.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf></usr/local/texlive/2022/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RB.otf></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/MinLibReg.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on main.pdf (4 pages, 588073 bytes).
 
-PDF statistics: 214 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 131072)
- 117 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 131072)
+ 133 words of extra memory for PDF output out of 10000 (max. 100000000)
 
