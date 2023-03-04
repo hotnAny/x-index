@@ -1,6 +1,7 @@
 .DS_Store
 data/zandbox
 data/fix_csv.py
+write-up
 *.gdoc
 *.gsheet
 fix_*.py
