@@ -6,7 +6,7 @@ import plotly.io as pio
 import pandas as pd
 import time
 
-DEBUG = False
+DEBUG = True
 
 VENUE_INFO_DIR = './data/hci_venues.csv'
 PAPER_COUNT_DIR = './data/paper_count.csv'
@@ -19,10 +19,9 @@ WIDTH_FIG = 1200
 HEIGHT_FIG = 675
 DIR_OUTPUT_IMAGES = '/Users/hotnany/Library/CloudStorage/GoogleDrive-xac@g.ucla.edu/My Drive/Research/2023_X-index/write-up/figures'
 
-
-# one measurement only concerns citations in the first N year after a paper is published
 FIRST_N = 5
 
+# clean up some known abnormality during keyword matching
 def clean_text(text):
     text_new = text.lower()
     text_new = text_new.replace('and', '')
@@ -80,18 +79,18 @@ if __name__ == "__main__":
             venue_year = f[0: f.find('-')].upper()
             result['year'] = venue_year[-4:]
 
-            # measurement 1: X-index---% of non-HCI forward citations
+            # measurement 1: for detailed explanation see the end of code
             cnt_total_citations = 0
             cnt_hci_citations = 0
             distr_by_venue_cnt_hci_citations = {}
             for venue in ls_venues:
                 distr_by_venue_cnt_hci_citations[venue] = 0
 
-            # measurement 2: X-index in the first N years after a paper was published
+            # measurement 2: for detailed explanation see the end of code
             cnt_total_citations_firstn = 0
             cnt_hci_citations_firstn = 0
 
-            # measurement 3: X-index broken down by citing-year (when the citations happened) for each venue/year
+            # measurement 3: for detailed explanation see the end of code
             distr_by_cite_year_cnt_hci_citations = {}
             distr_by_cite_year_cnt_total_citations = {}
 
@@ -175,8 +174,7 @@ if __name__ == "__main__":
 
             results[venue_year] = result
 
-    # print(results)
-
+    # optimize figures for paper writing
     def optimize_fig(fig, move_legend=True):
         fig.update_layout(yaxis=dict(range=[0, 1]))
         fig.update_layout(legend_title=None)
@@ -227,6 +225,7 @@ if __name__ == "__main__":
             fig.show()
         pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig1.png'), width=WIDTH_FIG, height=HEIGHT_FIG)
 
+    # --------------------------------------------------------------------------------
     # 
     # plot measurement 2: x-index of each HCI venue over the years, only including citations in the first n-years after (i.e., not including) that venue/year
     #  e.g., for uist2013, we count citations from 2014-2018 if n == 5
@@ -264,7 +263,7 @@ if __name__ == "__main__":
             fig.show()
         pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig2.png'), width=WIDTH_FIG, height=HEIGHT_FIG)
 
-
+    # --------------------------------------------------------------------------------
     # 
     # plot measurement 3: x-index of each venue/year over the subsequent years (including that venue/year)
     # 
@@ -309,6 +308,7 @@ if __name__ == "__main__":
                 fig.show()
             pio.write_image(fig, os.path.join(DIR_OUTPUT_IMAGES,'fig3_' + venue.upper() + '.png'), width=WIDTH_FIG, height=HEIGHT_FIG)
 
+    # --------------------------------------------------------------------------------
     # 
     # plot measurement 4: each year’s x-index based on citations of all HCI papers in the past n years
     # e.g., for 2015, we only consider that year's citations of HCI papers published in 2010-2015;
@@ -325,13 +325,6 @@ if __name__ == "__main__":
         for dyear in range(0, num_years + 1):
             cite_year = start_year + dyear
             cite_years.append(cite_year)
-        
-        # !!! DO NOT DELETE
-        # >>> for showing absolute counts
-        # titles = {
-        #     'non-hci-citations-distr-by-cite-year': 'non-HCI citations',
-        #     'hci-citations-distr-by-cite-year': 'HCI citations'
-        # }
 
         # for key in titles:
         d1 = {} # non-HCI
@@ -363,27 +356,13 @@ if __name__ == "__main__":
                         d1[venue][dyear] += distr_by_cite_year_non_hci_citations[str(cite_year)]
                     if str(cite_year) in distr_by_cite_year_hci_citations:
                         d2[venue][dyear] += distr_by_cite_year_hci_citations[str(cite_year)]
-            
-            # !!! DO NOT DELETE
-            # >>> normalization if you want to show abs counts
-            # 
-            # for dyear in range(0, num_years):
-            #     year = start_year + dyear
-            #     cnt = 0
-            #     for prev_year in range(year - FIRST_N, year + 1):
-            #         venue_year = venue + str(prev_year)
-            #         if venue_year in paper_counts:
-            #             cnt += int(paper_counts[venue_year])
-            #         else:
-            #             d[venue][dyear] = float('NaN')
-            #     d[venue][dyear] /= cnt
 
             for dyear in range(0, num_years + 1):
                 # d1 becomes x-index
                 d1[venue][dyear] /= (d1[venue][dyear] + d2[venue][dyear])
 
         df = pd.DataFrame(data=d1)
-        fig = px.line(df, x='year', y=venues) #, title="Each year's X-index only based on HCI papers published in the previous " + str(FIRST_N) + " years")
+        fig = px.line(df, x='year', y=venues)
         optimize_fig(fig)
         fig.update_xaxes(title_text="Citation Year")
         fig.update_yaxes(title_text="X-index")
