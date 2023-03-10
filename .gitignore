@@ -5,3 +5,4 @@ write-up
 *.gdoc
 *.gsheet
 fix_*.py
+*/.DS_Store
