@@ -10,5 +10,5 @@ Given a set of venues representing a research field, the X-index of the papers i
 * Citation data of CHI/UIST/CSCW papers between 2010 and 2020 (i.e., lists of papers that cite these HCI papers), in ```.ris``` format;
 * A python script to perform some analyses of HCI's X-index
 
-## Cite as
-TBA.
+## Paper
+Chen, Xiang “Anthony.” “HCI Papers Cite HCI Papers, Increasingly So,” March 13, 2023. http://128.84.21.203/abs/2303.07539.
